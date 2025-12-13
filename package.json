@@ -1,15 +1,15 @@
 {
   "name": "convoicar-alert-server",
   "version": "1.0.0",
-  "description": "Serveur d'alerte Convoicar",
+  "description": "Serveur de surveillance 24/7 pour alertes Convoicar",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
+    "axios": "^1.6.2",
     "cors": "^2.8.5",
-    "axios": "^1.6.2"
+    "express": "^4.18.2"
   },
   "engines": {
     "node": ">=18"
