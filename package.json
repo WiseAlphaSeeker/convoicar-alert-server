@@ -1,7 +1,6 @@
 {
   "name": "serveur-alerte-de-convoi",
   "version": "1.0.0",
-  "description": "Serveur de surveillance 24/7 pour alertes Convoicar",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
