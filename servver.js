@@ -2,14 +2,15 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
-// Route de santé (Render aime bien)
+// Route racine (Render health check)
 app.get("/", (req, res) => {
-  res.status(200).send("✅ Serveur d'alerte Convoicar actif");
+  res.status(200).send("✅ Serveur Convoicar actif");
 });
 
 // Petite route test
@@ -18,5 +19,5 @@ app.get("/ping", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Server running on port ${PORT}`);
+  console.log(`✅ Serveur lancé sur le port ${PORT}`);
 });
