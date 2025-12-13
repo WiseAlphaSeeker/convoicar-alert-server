@@ -6,18 +6,19 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Render impose l'utilisation de process.env.PORT
 const PORT = process.env.PORT || 3000;
 
-// Route principale (Render health check)
+// Route principale (health check)
 app.get("/", (req, res) => {
-  res.send("✅ Serveur d’alerte Convoicar actif");
+  res.status(200).send("✅ Serveur Convoicar actif");
 });
 
-// Route test mobile
-app.get("/mobile", (req, res) => {
-  res.send("📱 Connexion mobile active - alertes prêtes");
+// Route test
+app.get("/ping", (req, res) => {
+  res.json({ ok: true, message: "pong" });
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Serveur lancé sur le port ${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
