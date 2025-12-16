@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: alerte-convoi-final
+    env: node
+    region: oregon
+    plan: free
+    branch: principal
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        generateValue: true
